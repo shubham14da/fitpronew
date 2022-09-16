@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.797d17d4.css",
+    "main.js": "/static/js/main.6c23df9d.js",
+    "static/media/Gynaecologist.png": "/static/media/Gynaecologist.c199c00673122928fc24.png",
+    "static/media/Dermatologist.png": "/static/media/Dermatologist.7059284102db9dadb077.png",
+    "static/media/cosmetologist.png": "/static/media/cosmetologist.68871e764586b5eebe14.png",
+    "static/media/nutritionist.png": "/static/media/nutritionist.0a2488ec3c44a6ec99bb.png",
+    "static/media/Homepage.jpg": "/static/media/Homepage.60ab68440885d8597798.jpg",
+    "static/media/Careercounsellor.png": "/static/media/Careercounsellor.bbb766e27f51bb585096.png",
+    "static/media/Fitness instructor.png": "/static/media/Fitness instructor.124f4c9e67bded011151.png",
+    "static/media/Aruyvedic.png": "/static/media/Aruyvedic.59b4be6f87a063b9fab1.png",
+    "static/media/physician.png": "/static/media/physician.f8e93adc433111494629.png",
+    "static/media/Physiotherapist.png": "/static/media/Physiotherapist.56cc21eab95dba8c8433.png",
+    "static/media/Aerobics.png": "/static/media/Aerobics.45596fc2a0eec8f5d03b.png",
+    "static/media/yoga34.png": "/static/media/yoga34.f07750a4bc92b90778c0.png",
+    "static/media/Counsellor.png": "/static/media/Counsellor.158609b4e3c141a60466.png",
+    "static/media/handshake.png": "/static/media/handshake.fec586e9ced4464da168.png",
+    "static/media/avatar.png": "/static/media/avatar.7944223ac7d294518b55.png",
+    "index.html": "/index.html",
+    "main.797d17d4.css.map": "/static/css/main.797d17d4.css.map",
+    "main.6c23df9d.js.map": "/static/js/main.6c23df9d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.797d17d4.css",
+    "static/js/main.6c23df9d.js"
+  ]
+}

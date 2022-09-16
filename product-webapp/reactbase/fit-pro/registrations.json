@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "firstName": "vakiti",
+      "lastName": "bhavani",
+      "email": "bhavanivakiti@gmail.com",
+      "password": "Vakiti@123",
+      "confirmPassword": "Vakiti@123",
+      "userType": "user",
+      "id": 1
+    },
+    {
+      "firstName": "vakiti",
+      "lastName": "bhavani",
+      "email": "bhavanivakiti@gmail.com",
+      "password": "Vakiti@123",
+      "confirmPassword": "Vakiti@123",
+      "userType": "user",
+      "id": 2
+    }
+  ],
+  "experts": [
+    {
+      "firstName": "vakiti",
+      "lastName": "bhavani",
+      "email": "bhavanivakiti@gmail.com",
+      "password": "Vakiti@123",
+      "confirmPassword": "Vakiti@123",
+      "userType": "expert",
+      "role": null,
+      "experience": null,
+      "educationalqualifications": null,
+      "id": 1
+    },
+    {
+      "firstName": "vakiti",
+      "lastName": "bhavani",
+      "email": "bhavanivakiti@gmail.com",
+      "password": "Vakiti@123",
+      "confirmPassword": "Vakiti@123",
+      "userType": "expert",
+      "role": null,
+      "experience": null,
+      "educationalqualifications": null,
+      "id": 2
+    }
+  ]
+}

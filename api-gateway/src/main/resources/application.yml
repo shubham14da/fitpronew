@@ -1,0 +1,63 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            exposedHeaders: "*"
+      routes:
+        - id: paymentservice
+          uri: lb://paymentservice
+          predicates:
+            - Path=/paymentservice/**
+          filters:
+            - RewritePath=/paymentservice(?<segment>/?.*), $\{segment}
+
+        - id: authenticationservice
+          uri: lb://authenticationservice
+          predicates:
+            - Path=/authenticationservice/**
+          filters:
+            - RewritePath=/authenticationservice(?<segment>/?.*), $\{segment}
+
+        - id: emailservice
+          uri: lb://emailservice
+          predicates:
+            - Path=/emailservice/**
+          filters:
+            - RewritePath=/emailservice(?<segment>/?.*), $\{segment}
+
+        - id: appointmentservice
+          uri: lb://appointmentservice
+          predicates:
+            - Path=/appointmentservice/**
+          filters:
+            - RewritePath=/appointmentservice(?<segment>/?.*), $\{segment}
+
+        - id: userservice
+          uri: lb://userservice
+          predicates:
+            - Path=/userservice/**
+          filters:
+            - RewritePath=/userservice(?<segment>/?.*), $\{segment}
+
+        - id: productwebapp
+          uri: lb://productwebapp
+          predicates:
+            - Path=/**
+          filters:
+            - RewritePath=/productwebapp(?<segment>/?.*), $\{segment}

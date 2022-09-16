@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.appointment{
+    margin: 30px 300px;
+    padding: 100px 10px;
+    box-shadow: 1px 1px 5px 3px gray;
+}
+.appointment_upper_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.appointment_upper_content img{
+    margin-right: 30px;
+}
+.appointment_upper_content, .appointment_upper_content form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.appointment_upper_content form select{
+    margin-right: 30px;
+}
+.appointment_upper_content select{
+    max-width: 200px;
+    padding: 3px;
+    box-shadow: 1px 1px 1px rgb(134, 125, 125);
+}
+.button_add{
+    color: white;
+    padding: 8px;
+    border: none;
+    margin-right: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    background: rgb(69, 69, 236);
+}
+.button_add:hover{
+    opacity: 0.8;
+}
+
+/* mid content */
+.appointment_mid_content{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+table {
+    width: 80%;
+}
+table, th, td {
+    border:1px solid black;
+    text-align: center;
+  }
+
+
+/* lower content */
+.appointment_lower_content{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.appointment_lower_content input{
+    width: 400px;
+    padding: 5px;
+}
+.edit_appointment{
+    display: flex;
+    margin-bottom: 10px
+}
+.edit_appointment img{
+    background:rgb(182, 179, 179);
+    padding: 5px;
+}
+
+@media screen and (max-width: 1150px){
+    .appointment{
+        margin:30px 100px;
+        padding: 100px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .appointment{
+        margin:30px 50px;
+        padding: 100px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .appointment_upper_content{
+        display: flex;
+        flex-direction: column;
+    }
+    .appointment_upper_content img{
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "fitPro": [
+    {
+      "id": "1001",
+      "expert_FirstName": "Saurabh",
+      "expert_LastName": "Mehta",
+      "expert_EmailId": "s@gmail.com",
+      "expert_Specialization": "Theraphy",
+      "expert_Role": "1",
+      "expert_PhoneNumber": "9205971495",
+      "expert_Educational": "MBBS",
+      "expert_AboutMe": "Hi i am a Surgeon",
+      "expert_Experience": "10yr"
+    }
+  ],
+  "booking": [
+    {
+      "expertId": "101",
+      "appointment_id": "adad122",
+      "user_EmailId": "user1@gmail.com",
+      "expert_emailId": "s@gmail.com",
+      "appointment_Date": "10/12/2022",
+      "booked_On": "10/15/2022",
+      "appointment_Specialization": "",
+      "patient_Concern": "Text",
+      "start_Time": "10:00:30",
+      "end_Time": "11:00:40",
+      "status": "Booked",
+      "meeting_id": ""
+    }
+  ],
+  "AddScheduler": []
+}

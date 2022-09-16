@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.expertList{
+    /* box-shadow: 1px 1px 5px 3px grey; */
+    margin: 20px auto;
+    padding: 50px 50px;
+    position: relative;
+    width: 80%;
+    /* box-shadow: 1px 1px 5px 3px gray; */
+    border-radius: 10px;
+}
+.choose_expert {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.expertList h1{
+    font-size: 24px;
+    margin-left: 20px;
+}
+.expertList select{
+    padding: 10px;
+    margin-left: 20px;
+
+}

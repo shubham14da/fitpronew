@@ -1,0 +1,41 @@
+.list_of_experts{
+    margin-top: 0px;
+}
+.list_of_experts{
+    margin: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.each_expert{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsla(0, 6%, 91%, 0.549);
+    margin: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    flex-basis: 21%;
+}
+.each_expert img, .each_expert p, .each_expert h3, .each_expert h5{
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+.each_expert button{
+    padding: 7px;
+    border: none;
+    background: rgb(69, 69, 236);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    transition: transform .5s;
+}
+.each_expert button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1.1);
+}

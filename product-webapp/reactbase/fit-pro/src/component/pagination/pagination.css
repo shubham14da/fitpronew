@@ -1,0 +1,22 @@
+.pagination{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    width: 90%;
+}
+
+
+.page-item{
+    margin-right: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.page-item:hover{
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}

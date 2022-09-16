@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  div .button {
+    margin: 0 15px 15px 0;
+  }
+  
+  .button {
+    display: inline-block;
+
+  }
+  
+  
+  .bigVideo{
+      width: 100%;
+      /* background-color: rgb(62, 132, 246);
+      border-radius: 8px; */
+      overflow: hidden;
+      /* margin: 8px;
+      padding: 8px; */
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+  }
+  
+  /* .smallInVideo{
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    position: absolute;
+    height: 30%;
+    left: 6%;
+    top: 11%;
+    z-index: 99;
+  } */
+  
+  .bigInVideo{
+    width: 400px;
+      overflow: hidden;
+      display: flex;
+      flex: 1 1 0%;
+      flex-direction: column;
+      position: relative;
+      height: 100%;
+  }
+  .img, svg {
+    vertical-align: middle;
+    width: 60px;
+    height: 45px;
+}

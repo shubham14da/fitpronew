@@ -1,0 +1,79 @@
+.appointment-row{
+ padding: 3px !important;
+ justify-content: center;
+ align-items: center;
+ display: flex;
+}
+.input-fields{
+    /* border: 1px solid gray; */
+    border-radius: 5px;
+    margin: 15px;
+    padding: 0px;
+}
+.input-fields .button, input, optgroup, select, textarea {
+    /* width: 100px; */
+    border: none;
+    margin:15px
+}
+.input-icons{
+    margin-left: auto;
+
+}
+.bg-primary {
+    background: none;
+    --bs-bg-opacity: 0 !important ;
+  }
+
+#image-pic{
+    width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}  
+.input-fields .button, input, optgroup, select, textarea {
+background:none;
+}
+@media only screen and (max-width: 600px) {
+    .appointment-input{
+        display:block;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+  }
+
+.list-group{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+ }
+
+ .react-datepicker-wrapper input {
+    border: 1px solid gray;
+    padding: 11px;
+    
+    
+  }
+
+.react-time-picker{
+    /* width: 100%; */
+  }
+  .react-time-picker__inputGroup{
+    text-align: initial;
+  }
+  .react-time-picker__inputGroup__input {
+    /* min-width: 4.54em !important; */
+  }
+  .react-time-picker{
+    border: 1px solid gray;
+  padding: 0px;
+  width: max-content;
+  }
+  .react-time-picker__wrapper{
+  border: none !important;
+  }
+  
+
+
+
+
