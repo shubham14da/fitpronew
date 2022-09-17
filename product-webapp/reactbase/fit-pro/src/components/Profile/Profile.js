@@ -36,7 +36,7 @@ function Profile() {
   const email = window.localStorage.getItem("EmailID");
 
   const myfun = () => {
-    fetch(`http://13.58.188.1/userservice/api/v1/expertprofile/${email}`)
+    fetch(`http://13.58.188.1:8761/userservice/api/v1/expertprofile/${email}`)
       .then((res) => res.json())
       .then(
         (response) => (
@@ -117,7 +117,7 @@ function Profile() {
     console.log(JSON.stringify(JsonData));
     const id = JsonData.id;
     const json = JSON.stringify(JsonData);
-    const res = axios.put(`http://13.58.188.1/userservice/api/v1/expert/${email}`, {
+    const res = axios.put(`http://13.58.188.1:8761/userservice/api/v1/expert/${email}`, {
       firstName: firstName,
       lastName: lastName,
       specialization: specialization,

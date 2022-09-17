@@ -67,7 +67,7 @@ function Appointment() {
   };
 
   const FetchFunc = () =>
-    fetch(`http://13.58.188.1/appointmentservice/api/slot/expertslot/${emailId}`)
+    fetch(`http://13.58.188.1:8761/appointmentservice/api/slot/expertslot/${emailId}`)
       .then((res) => res.json())
       .then((response) => {
         setData(response)
@@ -89,7 +89,7 @@ function Appointment() {
     e.preventDefault();
     console.log(JsonData);
     const json = JSON.stringify(JsonData);
-    const res = axios.post("http://13.58.188.1/appointmentservice/api/slot/newslot", {
+    const res = axios.post("http://13.58.188.1:8761/appointmentservice/api/slot/newslot", {
       scheduleId: JsonData.schedule_Id,
       expertId: emailId,
       scheduleDate: JsonData.Schedule_date,
@@ -145,7 +145,7 @@ function Appointment() {
   };
 
   const handleCancel = (e) => {
-    const deleteSlot = axios.delete(`http://13.58.188.1/appointmentservice/api/slot/delete/${e}`
+    const deleteSlot = axios.delete(`http://13.58.188.1:8761/appointmentservice/api/slot/delete/${e}`
     ).then(res => {
       FetchFunc()
     })
@@ -211,7 +211,7 @@ function Appointment() {
     //     status: "AVAILABLE"
     //   }
     // }
-    const res = axios.put(`http://13.58.188.1/appointservice/api/slot/update`, updateData, {
+    const res = axios.put(`http://13.58.188.1:8761/appointservice/api/slot/update`, updateData, {
       headers: {
         "Content-Type": "application/json",
       },
