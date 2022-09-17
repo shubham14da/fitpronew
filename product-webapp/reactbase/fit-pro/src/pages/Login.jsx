@@ -14,7 +14,7 @@ const LoginForm = () =>{
   const navigate = useNavigate();
   const handleSubmit= ()=>{
     axios
-      .post("https://fitpro.stackroute.io/authenticationservice/api/v1/authenticateUser", {
+      .post("http://13.58.188.1/authenticationservice/api/v1/authenticateUser", {
         userEmailId: email,
         password: password
       })

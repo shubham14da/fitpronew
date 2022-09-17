@@ -28,7 +28,7 @@ function Booking() {
  console.log(ID,"12121212");
  
   useEffect(() => {
-    fetch(`https://fitpro.stackroute.io/appointmentservice/api/appointment/userId/${emailId}`)
+    fetch(`http://13.58.188.1/appointmentservice/api/appointment/userId/${emailId}`)
     .then(res=>res.json())
     .then(response=>setBookData(response))
     .catch(err=>console.log(err));

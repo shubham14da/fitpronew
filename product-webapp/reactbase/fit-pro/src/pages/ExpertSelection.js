@@ -15,7 +15,7 @@ function ExpertSelection() {
 
     useEffect(() => {
         
-            fetch(`https://fitpro.stackroute.io/userservice/api/v1/enthusiatprofile/${emailId}`)
+            fetch(`http://13.58.188.1/userservice/api/v1/enthusiatprofile/${emailId}`)
             .then(res => res.json())
             .then(res => setUser(res))
             .catch(err => console.log(err))
