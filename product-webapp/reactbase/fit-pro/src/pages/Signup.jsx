@@ -61,11 +61,11 @@ const Signup = () => {
   const onSubmit = async(values) => {
     console.log(values);
     // const url = signUpRole === "user" ? "http://localhost:3003/users" : signUpRole === "expert" ? "http://localhost:3003/experts" : "";
-    const url = signUpRole === "ENTHUSIAST" ? "http://13.58.188.1:8761/userservice/api/v1/saveEnthusiast" : signUpRole === "EXPERT" ? "http://13.58.188.1:8761/userservice/api/v1/saveExpert" : "";
+    const url = signUpRole === "ENTHUSIAST" ? "http://18.222.128.181:8761/userservice/api/v1/saveEnthusiast" : signUpRole === "EXPERT" ? "http://18.222.128.181:8761/userservice/api/v1/saveExpert" : "";
     const data =  signUpRole === "ENTHUSIAST" ? {emailId:values.email, firstName:values.firstName, lastName:values.lastName, phoneNumber:"", avatarUrl:"", photo:""} : {emailId:values.email, firstName:values.firstName,role:"", lastName:values.lastName, specialization: values.specialization, phoneNumber:"", avatarUrl:"", photo:"",experience:"",educationalQualification:"",aboutMe:""};
     await axios.post(url,data).then(res => {
       console.log(res,'res')
-      axios.post("http://13.58.188.1:8761/authenticationservice/api/v1/createUser",{
+      axios.post("http://18.222.128.181:8761/authenticationservice/api/v1/createUser",{
         userEmailId: values.email,
         password: values.password,
         userRole: signUpRole
