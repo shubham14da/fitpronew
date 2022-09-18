@@ -21,7 +21,7 @@ spring:
             exposedHeaders: "*"
       routes:
         - id: paymentservice
-          uri: lb://paymentservice
+          uri: http://18.222.128.181:8070
           predicates:
             - Path=/paymentservice/**
           filters:
