@@ -40,7 +40,7 @@ function Appointment() {
   const emailId = window.localStorage.getItem("EmailID");
 
   const myFunc = async () => {
-    await fetch("http://localhost:3000/booking")
+    await fetch("http://18.222.128.181:3000/booking")
       .then((response) => response.json())
       .then((res) => {
         setItemTimes(res);
@@ -121,7 +121,7 @@ function Appointment() {
     });
   };
   const MyFunction1 = () => {
-    fetch("http://localhost:3000/AddScheduler")
+    fetch("http://18.222.128.181:3000/AddScheduler")
       .then((res) => res.json())
       .then((response) => setFetchData(response))
       .catch((err) => console.log("err", err));

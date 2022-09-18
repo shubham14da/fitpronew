@@ -623,7 +623,7 @@ const VideoCall = () => {
 
 
   // const myMeetingData=()=>{
-  //   fetch("http://localhost:3000/booking")
+  //   fetch("http://18.222.128.181:3000/booking")
   //   .then(res=>res.json())
   //   .then(response => setMeetingData(response))
   //   .catch(err=>console.log(err))
@@ -666,7 +666,7 @@ const VideoCall = () => {
   //  }
   //  console.log(jsonData,"90909990")
   //  const json = JSON.stringify(jsonData);
-  //  const res = axios.put(`http://localhost:3000/fitPro/`, json, {
+  //  const res = axios.put(`http://18.222.128.181:3000/fitPro/`, json, {
   //    headers: {
   //      "Content-Type": "application/json",
   //    },

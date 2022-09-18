@@ -30,7 +30,7 @@ function RightContent() {
   const email = window.localStorage.getItem("EmailID");
 
   // const myfun = () => {
-  //   fetch(`http://localhost:8080/userservice/api/v1/expertprofile/${email}`)
+  //   fetch(`http://18.222.128.181:8080/userservice/api/v1/expertprofile/${email}`)
   //     .then((res) => res.json())
   //     .then(
   //       (response) => (
@@ -121,7 +121,7 @@ function RightContent() {
 //     console.log(JSON.stringify(JsonData));
 //     const id = JsonData.id;
 //     const json = JSON.stringify(JsonData);
-//     const res = axios.put(`http://localhost:8080/userservice/api/v1/expert/${email}`, {
+//     const res = axios.put(`http://18.222.128.181:8080/userservice/api/v1/expert/${email}`, {
 //       firstName: firstName,
 //       lastName: lastName,
 //       specialization: specialization,
