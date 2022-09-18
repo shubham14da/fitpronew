@@ -10,6 +10,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: Global@145#
       MYSQL_USERNAME: root
+      MYSQL_DATABASE: AuthenticationDB
       #      MYSQL_PASSWORD: Global@145#
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
 
