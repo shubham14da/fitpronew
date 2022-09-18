@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
 @EnableEurekaClient
-@CrossOrigin
+@CrossOrigin(origins = "http://18.222.128.181:8080")
 public class ApiGatewayApplication {
 
 	public static void main(String[] args) {
