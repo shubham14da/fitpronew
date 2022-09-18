@@ -21,42 +21,42 @@ spring:
             exposedHeaders: "*"
       routes:
         - id: paymentservice
-          uri: http://18.222.128.181:8070
+          uri: lb://paymentservice
           predicates:
             - Path=/paymentservice/**
           filters:
             - RewritePath=/paymentservice(?<segment>/?.*), $\{segment}
 
         - id: authenticationservice
-          uri: http://18.222.128.181:8095
+          uri: lb://authenticationservice
           predicates:
             - Path=/authenticationservice/**
           filters:
             - RewritePath=/authenticationservice(?<segment>/?.*), $\{segment}
 
         - id: emailservice
-          uri: http://18.222.128.181:8075
+          uri: lb://emailservice
           predicates:
             - Path=/emailservice/**
           filters:
             - RewritePath=/emailservice(?<segment>/?.*), $\{segment}
 
         - id: appointmentservice
-          uri: http://18.222.128.181:8097
+          uri: lb://appointmentservice
           predicates:
             - Path=/appointmentservice/**
           filters:
             - RewritePath=/appointmentservice(?<segment>/?.*), $\{segment}
 
         - id: userservice
-          uri: http://18.222.128.181:8083
+          uri: lb://userservice
           predicates:
             - Path=/userservice/**
           filters:
             - RewritePath=/userservice(?<segment>/?.*), $\{segment}
 
         - id: productwebapp
-          uri: http://18.222.128.181:4200
+          uri: lb://productwebapp
           predicates:
             - Path=/**
           filters:
