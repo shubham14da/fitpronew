@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/appointment")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class AppointmentController {
 
     // ResponseEntity;
