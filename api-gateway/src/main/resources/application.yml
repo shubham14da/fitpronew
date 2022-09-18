@@ -49,7 +49,7 @@ spring:
             - RewritePath=/appointmentservice(?<segment>/?.*), $\{segment}
 
         - id: userservice
-          uri: lb://userservice
+          uri: http://18.222.128.181:8761
           predicates:
             - Path=/userservice/**
           filters:
