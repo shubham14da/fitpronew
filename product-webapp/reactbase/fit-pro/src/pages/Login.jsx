@@ -14,7 +14,7 @@ const LoginForm = () =>{
   const navigate = useNavigate();
   const handleSubmit= ()=>{
     axios
-      .post("http://18.219.241.130:8080/authenticationservice/api/v1/authenticateUser", {
+      .post("http://3.16.66.107:8080/authenticationservice/api/v1/authenticateUser", {
         userEmailId: email,
         password: password
       })

@@ -28,7 +28,7 @@ function Booking() {
  console.log(ID,"12121212");
 
   useEffect(() => {
-    fetch(`http://18.219.241.130:8080/appointmentservice/api/appointment/expertId/${emailId}`)
+    fetch(`http://3.16.66.107:8080/appointmentservice/api/appointment/expertId/${emailId}`)
     .then(res=>res.json())
     .then(response=>{
       setCurrentItems(response)
