@@ -11,7 +11,7 @@ services:
       MYSQL_ROOT_PASSWORD: Global@145#
       MYSQL_DATABASE: AuthenticationDB
       MYSQL_USERNAME: root
-      #      MYSQL_PASSWORD: Global@145#
+      #     MYSQL_PASSWORD: Global@145#
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
 
   mongodbservice:
