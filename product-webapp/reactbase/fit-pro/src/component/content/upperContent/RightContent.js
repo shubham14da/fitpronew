@@ -30,7 +30,7 @@ function RightContent() {
   const email = window.localStorage.getItem("EmailID");
 
   // const myfun = () => {
-  //   fetch(`http://18.222.128.181:8080/userservice/api/v1/expertprofile/${email}`)
+  //   fetch(`http://localhost:8080/userservice/api/v1/expertprofile/${email}`)
   //     .then((res) => res.json())
   //     .then(
   //       (response) => (
@@ -45,7 +45,7 @@ function RightContent() {
   // };
 
   const getProfile = () => {
-    fetch(`http://18.222.128.181:8761/userservice/api/v1/enthusiatprofile/${email}`)
+    fetch(`http://18.219.241.130:8080/userservice/api/v1/enthusiatprofile/${email}`)
     .then(res=> res.json())
       .then((response) => (
         setFirstName(response.firstName),
@@ -60,7 +60,7 @@ function RightContent() {
   const handleSubmit = (e) => {
     setToggle(false)
     e.preventDefault();
-    const res = axios.put(`http://18.222.128.181:8761/userservice/api/v1/enthusiast/${email}`, {
+    const res = axios.put(`http://18.219.241.130:8080/userservice/api/v1/enthusiast/${email}`, {
       firstName: firstName,
       lastName: lastName,
       emailId: emailId,
@@ -121,7 +121,7 @@ function RightContent() {
 //     console.log(JSON.stringify(JsonData));
 //     const id = JsonData.id;
 //     const json = JSON.stringify(JsonData);
-//     const res = axios.put(`http://18.222.128.181:8080/userservice/api/v1/expert/${email}`, {
+//     const res = axios.put(`http://localhost:8080/userservice/api/v1/expert/${email}`, {
 //       firstName: firstName,
 //       lastName: lastName,
 //       specialization: specialization,

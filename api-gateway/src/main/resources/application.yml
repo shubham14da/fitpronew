@@ -28,7 +28,7 @@ spring:
             - RewritePath=/paymentservice(?<segment>/?.*), $\{segment}
 
         - id: authenticationservice
-          uri: localhost:8095
+          uri: lb://authenticationservice
           predicates:
             - Path=/authenticationservice/**
           filters:
@@ -49,7 +49,7 @@ spring:
             - RewritePath=/appointmentservice(?<segment>/?.*), $\{segment}
 
         - id: userservice
-          uri: localhost:8090
+          uri: lb://userservice
           predicates:
             - Path=/userservice/**
           filters:

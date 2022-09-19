@@ -40,7 +40,7 @@ function Appointment() {
   const emailId = window.localStorage.getItem("EmailID");
 
   const myFunc = async () => {
-    await fetch("http://18.222.128.181:3000/booking")
+    await fetch("http://localhost:3000/booking")
       .then((response) => response.json())
       .then((res) => {
         setItemTimes(res);
@@ -67,7 +67,7 @@ function Appointment() {
   };
 
   const FetchFunc = () =>
-    fetch(`http://18.222.128.181:8761/appointmentservice/api/slot/expertslot/${emailId}`)
+    fetch(`http://18.219.241.130:8080/appointmentservice/api/slot/expertslot/${emailId}`)
       .then((res) => res.json())
       .then((response) => {
         setData(response)
@@ -89,7 +89,7 @@ function Appointment() {
     e.preventDefault();
     console.log(JsonData);
     const json = JSON.stringify(JsonData);
-    const res = axios.post("http://18.222.128.181:8761/appointmentservice/api/slot/newslot", {
+    const res = axios.post("http://18.219.241.130:8080/appointmentservice/api/slot/newslot", {
       scheduleId: JsonData.schedule_Id,
       expertId: emailId,
       scheduleDate: JsonData.Schedule_date,
@@ -121,7 +121,7 @@ function Appointment() {
     });
   };
   const MyFunction1 = () => {
-    fetch("http://18.222.128.181:3000/AddScheduler")
+    fetch("http://localhost:3000/AddScheduler")
       .then((res) => res.json())
       .then((response) => setFetchData(response))
       .catch((err) => console.log("err", err));
@@ -145,7 +145,7 @@ function Appointment() {
   };
 
   const handleCancel = (e) => {
-    const deleteSlot = axios.delete(`http://18.222.128.181:8761/appointmentservice/api/slot/delete/${e}`
+    const deleteSlot = axios.delete(`http://18.219.241.130:8080/appointmentservice/api/slot/delete/${e}`
     ).then(res => {
       FetchFunc()
     })
@@ -211,7 +211,7 @@ function Appointment() {
     //     status: "AVAILABLE"
     //   }
     // }
-    const res = axios.put(`http://18.222.128.181:8761/appointservice/api/slot/update`, updateData, {
+    const res = axios.put(`http://18.219.241.130:8080/appointservice/api/slot/update`, updateData, {
       headers: {
         "Content-Type": "application/json",
       },

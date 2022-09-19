@@ -15,7 +15,7 @@ function App() {
 
 
   const myfun = ()=>{
-   fetch("http://18.222.128.181:3000/fitPro")
+   fetch("http://localhost:3000/fitPro")
    .then(res => res.json())
    .then(response => setJsonRes(response))
    .catch(err => console.log(err))
@@ -51,7 +51,7 @@ function App() {
   e.preventDefault();
 
   const json =  JSON.stringify({  });
-  const res =  axios.post('http://18.222.128.181:3000/posts', json, {
+  const res =  axios.post('http://localhost:3000/posts', json, {
   headers: {
     'Content-Type': 'application/json'
   }

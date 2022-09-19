@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/slot")
-@CrossOrigin(origins = "*")
+@CrossOrigin
 public class SlotController {
 
     private SlotServiceImpl slotService;
