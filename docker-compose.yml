@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   mysqlservice:
-    image: mysql:latest
+    image: ashishrits081/capstone-mysql:latest
     ports:
       - 3306:3306
     container_name: mysql-container
@@ -15,7 +15,7 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
 
   mongodbservice:
-    image: mongo:latest
+    image: ashishrits081/capstone-mongo:latest
     container_name: mongo-container
     network_mode: host
     hostname: localhost
@@ -23,6 +23,7 @@ services:
       - 27017:27017
 
   configserver:
+    image: ashishrits081/capstone-config-server-container:latest
     container_name: config-server-container
     build: config-server/
     hostname: localhost
@@ -31,6 +32,7 @@ services:
       - 8888:8888
 
   eurekaserver:
+    image: ashishrits081/eureka-server-container:latest
     container_name: eureka-server-container
     build: eureka-server/
     hostname: localhost
@@ -39,6 +41,7 @@ services:
       - 8761:8761
 
   api-gateway:
+    image: ashishrits081/api-gateway-container:latest
     container_name: api-gateway-container
     build: api-gateway/
     hostname: localhost
@@ -47,6 +50,7 @@ services:
       - 8080:8080
 
   authenticationservice:
+    image: ashishrits081/api-gateway-container:latest
     container_name: authentication-service-container
     build: authentication-service/
     hostname: localhost
@@ -60,6 +64,7 @@ services:
     restart: always
 
   emailservice:
+    image: ashishrits081/email-service-container:latest
     container_name: email-service-container
     build: email-service/
     hostname: localhost
@@ -74,6 +79,7 @@ services:
     restart: always
 
   appointmentservice:
+    image: ashishrits081/appointment-service-container:latest
     container_name: appointment-service-container
     build: appointment-service/
     hostname: localhost
@@ -87,6 +93,7 @@ services:
     restart: always
 
   paymentservice:
+    image: ashishrits081/payment-service-container:latest
     container_name: payment-service-container
     build: payment-service/
     hostname: localhost
@@ -100,6 +107,7 @@ services:
     restart: always
 
   userservice:
+    image: ashishrits081/user-service-container:latest
     container_name: user-service-container
     build: user-service/
     hostname: localhost
@@ -113,8 +121,8 @@ services:
     restart: always
 
   product-webapp:
+    image: ashishrits081/product-webapp-container:latest
     build: product-webapp/
-    image: product-webapp
     restart: always
     container_name: product-webapp
     network_mode: host
@@ -126,7 +134,7 @@ services:
       - configserver
 
   rabbitmq:
-    image: rabbitmq:management
+    image: ashishrits081/rabbitmq:management
     ports:
       - "5672:5672"
       - "15672:15672"
