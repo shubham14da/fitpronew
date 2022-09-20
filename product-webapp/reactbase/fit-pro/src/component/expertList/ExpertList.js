@@ -30,7 +30,7 @@ function ExpertList({expert}) {
     // item.Expert_Id === id && item.status === "Available"
 
     useEffect(() => {
-    fetch("http://3.16.66.107:8080/userservice/api/v1/experts")
+    fetch("http://13.59.223.209:8080/userservice/api/v1/experts")
     .then(res=>res.json())
     .then(response=>setExpertListData(response))
     .catch(err=>console.log(err));
