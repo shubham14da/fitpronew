@@ -28,7 +28,7 @@ function Booking() {
  console.log(ID,"12121212");
  
   useEffect(() => {
-    fetch(`http://${window.location.hostname}:30036/appointmentservice/api/appointment/userId/${emailId}`)
+    fetch(`http://${window.location.hostname}:${window.location.port}/appointmentservice/api/appointment/userId/${emailId}`)
     .then(res=>res.json())
     .then(response=>setBookData(response))
     .catch(err=>console.log(err));
