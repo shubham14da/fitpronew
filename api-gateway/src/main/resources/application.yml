@@ -1,7 +1,5 @@
 eureka:
   client:
-    service-url:
-      defaultZone: http://${servername_mongoDB}:8761/eureka
     register-with-eureka: true
     fetch-registry: true
 server:
