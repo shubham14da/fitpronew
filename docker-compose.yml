@@ -30,7 +30,7 @@ services:
     ports:
       - 8888:8888
     environment:
-      - servername_eureka: eurekaserver
+      - servername_eureka=eurekaserver
 
   eurekaserver:
     container_name: eureka-server-container
@@ -48,7 +48,7 @@ services:
     ports:
       - 8080:8080
     environment:
-      - servername_mongoDB: mongodbservice
+      - servername_mongoDB=mongodbservice
   authenticationservice:
     container_name: authentication-service-container
     build: authentication-service/
@@ -57,7 +57,7 @@ services:
     ports:
       - 8095:8095
     environment:
-      - servername_mysqlDB: mysqlservice
+      - servername_mysqlDB=mysqlservice
     depends_on:
       - eurekaserver
       - configserver
@@ -72,7 +72,7 @@ services:
     ports:
       - 8075:8075
     environment:
-      - servername_rabbitmq: rabbitmq
+      - servername_rabbitmq=rabbitmq
     depends_on:
       - mysqlservice
       - eurekaserver
@@ -88,8 +88,8 @@ services:
     ports:
       - 8097:8097
     environment:
-      - servername_mongoDB: mongodbservice
-      - servername_eureka: eurekaserver
+      - servername_mongoDB=mongodbservice
+      - servername_eureka=eurekaserver
     depends_on:
       - mongodbservice
       - eurekaserver
@@ -104,7 +104,7 @@ services:
     ports:
       - 8070:8070
     environment:
-      - servername_eureka: eurekaserver
+      - servername_eureka=eurekaserver
     depends_on:
       - mongodbservice
       - eurekaserver
@@ -134,7 +134,7 @@ services:
     ports:
       - 4200:4200
     environment:
-      - servername_eureka: eurekaserver
+      - servername_eureka=eurekaserver
     depends_on:
       - eurekaserver
       - configserver
