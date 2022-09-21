@@ -45,7 +45,7 @@ function RightContent() {
   // };
 
   const getProfile = () => {
-    fetch(`http://13.59.223.209:8080/userservice/api/v1/enthusiatprofile/${email}`)
+    fetch(`http://${window.location.hostname}:8080/userservice/api/v1/enthusiatprofile/${email}`)
     .then(res=> res.json())
       .then((response) => (
         setFirstName(response.firstName),
@@ -60,7 +60,7 @@ function RightContent() {
   const handleSubmit = (e) => {
     setToggle(false)
     e.preventDefault();
-    const res = axios.put(`http://13.59.223.209:8080/userservice/api/v1/enthusiast/${email}`, {
+    const res = axios.put(`http://${window.location.hostname}:8080/userservice/api/v1/enthusiast/${email}`, {
       firstName: firstName,
       lastName: lastName,
       emailId: emailId,

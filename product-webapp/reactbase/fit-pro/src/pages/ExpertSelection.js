@@ -15,7 +15,7 @@ function ExpertSelection() {
 
     useEffect(() => {
         
-            fetch(`http://13.59.223.209:8080/userservice/api/v1/enthusiatprofile/${emailId}`)
+            fetch(`http://${window.location.hostname}:8080/userservice/api/v1/enthusiatprofile/${emailId}`)
             .then(res => res.json())
             .then(res => setUser(res))
             .catch(err => console.log(err))
