@@ -30,7 +30,7 @@ services:
     ports:
       - 8888:8888
     environment:
-      - servername_eureka=eurekaserver
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
 
   eurekaserver:
     container_name: eureka-server-container
@@ -48,7 +48,7 @@ services:
     ports:
       - 8080:8080
     environment:
-      - servername_mongoDB=mongodbservice
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
   authenticationservice:
     container_name: authentication-service-container
     build: authentication-service/
@@ -57,7 +57,7 @@ services:
     ports:
       - 8095:8095
     environment:
-      - servername_mysqlDB=mysqlservice
+      - spring.datasource.url=jdbc:mysql://mysqlservice:3306/AuthenticationDB
     depends_on:
       - eurekaserver
       - configserver
@@ -72,7 +72,7 @@ services:
     ports:
       - 8075:8075
     environment:
-      - servername_rabbitmq=rabbitmq
+      - spring.rabbitmq.host=rabbitmq
     depends_on:
       - mysqlservice
       - eurekaserver
@@ -88,8 +88,8 @@ services:
     ports:
       - 8097:8097
     environment:
-      - servername_mongoDB=mongodbservice
-      - servername_eureka=eurekaserver
+      - spring.data.mongodb.uri=mongodb://mongodbservice:27017/fitpro
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
     depends_on:
       - mongodbservice
       - eurekaserver
@@ -104,7 +104,7 @@ services:
     ports:
       - 8070:8070
     environment:
-      - servername_eureka=eurekaserver
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
     depends_on:
       - mongodbservice
       - eurekaserver
@@ -134,7 +134,7 @@ services:
     ports:
       - 4200:4200
     environment:
-      - servername_eureka=eurekaserver
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
     depends_on:
       - eurekaserver
       - configserver
