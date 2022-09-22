@@ -150,7 +150,7 @@ services:
     #network_mode: host
     #hostname: localhost
     ports:
-      - 8086:8087
+      - 8087:8087
     environment:
       - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
     depends_on:
