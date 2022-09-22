@@ -90,6 +90,7 @@ services:
     environment:
       - spring.data.mongodb.uri=mongodb://mongodbservicesvc:27017/fitpro
       - eureka.client.serviceUrl.defaultZone=http://eurekaserversvc:8761/eureka
+      - MONGO_URI=mongodb://mongodbservicesvc:27017/fitpro
     depends_on:
       - mongodbservice
       - eurekaserver
