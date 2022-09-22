@@ -133,7 +133,7 @@ services:
     - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
     - spring.data.mongodb.host=mongodbservice
     - Domain=localhosteureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka
-    - logout_redirect_url = http://product-webapp:8087/#/
+    - logout_redirect_url=http://product-webapp:8087/#/
     ports:
       - 8083:8083
     depends_on:
