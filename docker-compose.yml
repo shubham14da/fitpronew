@@ -123,6 +123,8 @@ services:
     - expert_redirect_url=http://userservice.default.svc.cluster.local:8083/api/v1/authorize/expert/complete
     - eureka.client.serviceUrl.defaultZone=http://eurekaserver.default.svc.cluster.local:8761/eureka
     - spring.data.mongodb.host=mongodbservice.default.svc.cluster.local
+    - Domain=localhosteureka.client.serviceUrl.defaultZone=http://eurekaserver.default.svc.cluster.local:8761/eureka
+    - logout_redirect_url = http://product-webapp.default.svc.cluster.local:8087/#/
     ports:
       - 8083:8083
     depends_on:
