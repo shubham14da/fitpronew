@@ -19,42 +19,42 @@ spring:
             exposedHeaders: "*"
       routes:
         - id: paymentservice
-          uri: http://paymentservicesvc:8089
+          uri: http://${paymentservicesvc}:8089
           predicates:
             - Path=/paymentservice/**
           filters:
             - RewritePath=/paymentservice(?<segment>/?.*), $\{segment}
 
         - id: authenticationservice
-          uri: http://authenticationservicesvc:8091
+          uri: http://${authenticationservicesvc}:8091
           predicates:
             - Path=/authenticationservice/**
           filters:
             - RewritePath=/authenticationservice(?<segment>/?.*), $\{segment}
 
         - id: emailservice
-          uri: http://emailservicesvc:8088
+          uri: http://${emailservicesvc}:8088
           predicates:
             - Path=/emailservice/**
           filters:
             - RewritePath=/emailservice(?<segment>/?.*), $\{segment}
 
         - id: appointmentservice
-          uri: http://appointmentservicesvc:8090
+          uri: http://${appointmentservicesvc}:8090
           predicates:
             - Path=/appointmentservice/**
           filters:
             - RewritePath=/appointmentservice(?<segment>/?.*), $\{segment}
 
         - id: userservice
-          uri: http://userservicesvc:8083
+          uri: http://${userservicesvc}:8083
           predicates:
             - Path=/userservice/**
           filters:
             - RewritePath=/userservice(?<segment>/?.*), $\{segment}
 
         - id: productwebapp
-          uri: http://productwebappsvc:8087
+          uri: http://${productwebappsvc}:8087
           predicates:
             - Path=/**
           filters:
